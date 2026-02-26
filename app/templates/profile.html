@@ -1,7 +1,44 @@
 {% extends "base.html" %}
 
 {% block main %}
-<h1>Flask Starter Code</h1>
-<p class="lead">Use this starter template for your Flask apps as a way to quickly start any new project.<br>
-All you get are these files and mostly barebones HTML/CSS files.</p>
+<div class="profile-container">
+    <div class="profile-header">
+        <div class="profile-cover"></div>
+        <div class="profile-avatar">
+            <img src="{{ url_for('static', filename='profile.png') }}" alt="Profile Picture" class="avatar-img">
+        </div>
+    </div>
+    
+    <div class="profile-info">
+        <h1 class="profile-name">Darrin Bellamy</h1>
+        <p class="profile-username">@Da-Bell</p>
+        
+        <div class="profile-location-joined">
+            <span class="location"><i class="fas fa-map-marker-alt"></i> Kingston, Jamaica</span>
+            <br>
+            <span class="joined"><i class="fas fa-calendar-alt"></i> Joined {{date_joined}}</span>
+        </div>
+        
+        <div class="profile-bio">
+            <p>Student programmer trying really hard to udnerstand Flask. If you can believe it, I'm doing this much faster than before. Still not perfect yet</p>
+        </div>
+        
+        <div class="profile-stats">
+            <div class="stat-item">
+                <span class="stat-value">15</span>
+                <span class="stat-label">Posts</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">34</span>
+                <span class="stat-label">Followers</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">3.2k</span>
+                <span class="stat-label">Following</span>
+            </div>
+        </div>
+        
+        <button class="follow-btn">Follow</button>
+    </div>
+</div>
 {% endblock %}

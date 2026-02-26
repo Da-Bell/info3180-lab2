@@ -22,7 +22,7 @@ def about():
 @app.route('/profile/')
 def profile():
     """Trying to Render my profile."""
-    return render_template('profile.html', now = datetime.datetime.now(), date_joined = datetime.date(2019, 2, 7))
+    return render_template('profile.html', now = datetime.datetime.now(), date_joined = datetime.date(2024, 11, 14))
 # Or, if rendering a template:
 # def new_page():
 #     return render_template('new_page.html')
